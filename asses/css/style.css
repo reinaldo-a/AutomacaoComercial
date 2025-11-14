@@ -1,0 +1,208 @@
+/* ======== Reset ======== */
+* {
+  box-sizing: border-box; /* Inclui bordas e padding no cálculo total da largura e altura do elemento */
+  margin: 0; /* Remove as margens padrão dos elementos */
+  padding: 0; /* Remove o espaçamento interno padrão dos elementos */
+}
+
+body {
+  font-family: "Roboto", sans-serif; /* Define a fonte padrão usada no corpo do site */
+  color: #181d26; /* Define a cor do texto */
+  background-color: #fff; /* Define a cor de fundo da página */
+  line-height: 1.5; /* Define a altura entre as linhas do texto */
+}
+
+/* ======== HEADER ======== */
+header {
+  display: flex; /* Ativa o modelo flexbox para alinhamento flexível dos itens */
+  justify-content: space-between; /* Distribui o espaço igualmente entre os itens */
+  align-items: center; /* Alinha os itens verticalmente no centro */
+  padding: 16px 48px; /* Adiciona espaçamento interno (vertical e horizontal) */
+  background: #fff; /* Define a cor de fundo do cabeçalho */
+  box-shadow: 0 0 20px rgba(15, 48, 106, 0.05); /* Adiciona sombra com cor, desfoque e transparência */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Cria um espaçamento entre os elementos internos */
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  text-decoration: none; /* Remove o sublinhado dos links */
+  font-size: 16px; /* Define o tamanho da fonte */
+  font-weight: 500; /* Define o peso (espessura) da fonte */
+  color: #181d26;
+  transition: color 0.3s; /* Cria uma transição suave ao mudar a cor */
+}
+
+nav a:hover {
+  color: #254fad;
+}
+
+/* ======== BOTÕES ======== */
+.btn {
+  padding: 8px 16px;
+  border-radius: 8px; /* Arredonda os cantos do botão */
+  font-weight: 500;
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  transition: all 0.3s ease; /* Cria uma transição suave em todas as propriedades animáveis */
+}
+
+.btn-primary {
+  background: #254fad; /* Define o fundo azul principal */
+  color: #fff;
+  border: none; /* Remove a borda do botão */
+}
+
+.btn-primary:hover {
+  background: #1d3f90;
+}
+
+.btn-secondary {
+  background: transparent; /* Torna o fundo transparente */
+  border: 1px solid #254fad; /* Adiciona uma borda azul */
+  color: #254fad;
+}
+
+.btn-secondary:hover {
+  background: #254fad;
+  color: #fff;
+}
+
+/* ======== HERO ======== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 48px;
+  background: linear-gradient(180deg, #f0f6ff, #ffffff); /* Cria um degradê de cima para baixo */
+}
+
+.hero-content {
+  max-width: 600px; /* Define a largura máxima da área de texto */
+}
+
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 28px;
+}
+
+.hero img {
+  max-width: 500px;
+  width: 100%; /* Faz a imagem ocupar 100% do contêiner até o limite definido */
+  border-radius: 8px;
+}
+
+/* ======== BENEFÍCIOS ======== */
+section.beneficios {
+  max-width: 1100px;
+  margin: 60px auto; /* Centraliza horizontalmente e adiciona espaçamento vertical */
+  padding: 0 24px;
+}
+
+section.beneficios h2 {
+  text-align: center; /* Centraliza o texto horizontalmente */
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid; /* Define o layout em grid */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Faz o grid se adaptar ao tamanho da tela */
+  gap: 24px; /* Define o espaçamento entre os cartões */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e5ecff;
+  border-radius: 10px;
+  overflow: hidden; /* Esconde conteúdo que ultrapassa os limites do cartão */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-content h3 {
+  margin-bottom: 10px;
+  color: #0b2540;
+}
+
+.card-content p {
+  color: #555;
+}
+
+/* ======== FOOTER ======== */
+footer {
+  background: linear-gradient(90deg, rgba(5, 28, 141, 0.83), rgba(0, 131, 196, 0.83));
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+footer p {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  opacity: 0.9; /* Define a transparência do texto */
+}
+
+footer .social {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+footer .social img {
+  width: 32px;
+  height: 32px;
+  filter: brightness(0) invert(1); /* Inverte as cores do ícone e o torna branco */
+  transition: transform 0.2s;
+}
+
+footer .social img:hover {
+  transform: scale(1.1); /* Aumenta levemente o tamanho no hover */
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+}
