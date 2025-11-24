@@ -121,21 +121,34 @@ nav a:hover {
 .beneficios h2 {
     font-size: 32px;
     font-weight: bold;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 /* ----- Cards (imagem + texto lado a lado) ----- */
 .beneficio-item {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+    gap: 80px;
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px 0 40px auto;;
+    border-radius: 16px;
+    background: #e7eef9;
+}
+
+.beneficio-itemE {
+    display: flex;
+    align-items: center;
+    justify-content: right;
     gap: 40px;
     width: 90%;
     max-width: 1100px;
-    margin: 40px auto;
-    padding: 40px;
+    margin: 40px 0;
     border-radius: 16px;
     background: #e7eef9;
+    overflow: hidden;
 }
 
 /* Alternar lado da imagem */
@@ -148,13 +161,17 @@ nav a:hover {
     width: 30%;
     max-width: 320px;
     border-radius: 20px;
+  }
+
+.beneficio-itemE img {
+    width: 30%;
+    max-width: 320px;
+    border-radius: 20px;
 }
-
-
 /* Textos */
 .beneficio-texto {
     width: 45%;
-    text-align: left;
+    text-align: center;    
 }
 
 .beneficio-texto h3 {
@@ -166,6 +183,7 @@ nav a:hover {
 .beneficio-texto p {
     font-size: 16px;
     line-height: 1.5;
+    
 }
 
 /* ======== FOOTER ======== */
