@@ -1,0 +1,45 @@
+.sobre-nos {
+    background-image: url('../img/ceu.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 50px 0;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+}
+
+.sobre-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.title-sobre { 
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sobre-img img {
+    width: 350px;
+    height: auto;
+    border-radius: 25px; /* mesmo estilo do print */
+    object-fit: cover;
+}
+
+.sobre-texto h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.sobre-texto p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
