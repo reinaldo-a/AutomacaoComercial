@@ -20,6 +20,7 @@ header {
   padding: 16px 48px; /* Adiciona espaçamento interno (vertical e horizontal) */
   background: #fff; /* Define a cor de fundo do cabeçalho */
   box-shadow: 0 0 20px rgba(15, 48, 106, 0.05); /* Adiciona sombra com cor, desfoque e transparência */
+  border-bottom: 1px solid #e0e0e0; /* Adiciona uma linha inferior fina e cinza clara */
 }
 .header-left {
   display: flex;
