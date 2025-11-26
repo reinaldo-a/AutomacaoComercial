@@ -1,0 +1,78 @@
+.hero-servicos {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-servicos h2 {
+    font-size: 36px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+/* Listagem de serviços */
+
+.pacotes-servicos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 20px 15px;
+}
+
+.pacote{
+    border: 1px solid #C4C7CD;
+    border-radius: 12px;
+    padding: 20px;
+    width: 16.5rem;
+    box-shadow: 0 8px 80px rgba(151, 151, 151, 0.1);
+}
+
+.title-planos {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.p-planos {
+    font-size: 13px;
+    color: #333333;
+    margin-bottom: 15px;
+    height: 4rem;
+}
+
+.valores-planos {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-bottom: 15px;
+}
+
+.preco-planos {
+    font-size: 3rem;
+    color: #5fcc6f;
+    margin: 1rem auto;
+}
+
+.botao-inscrever {
+  padding: 15px 25px;
+  border: 2px solid #333; 
+  border-radius: 50px; 
+  background: transparent;
+  font-size: 13px;
+  font-weight: 500;
+  width: 95%;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.botao-inscrever:hover {
+  background: #166EE1;
+  color: #fff;
+  border: 2px solid #166EE1;
+}
+
+.pacote > h4 {
+    margin-bottom: 10px;
+}

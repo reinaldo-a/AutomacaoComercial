@@ -28,6 +28,10 @@ header {
   gap: 10px; /* Cria um espaçamento entre os elementos internos */
 }
 
+.logo img {
+  width: 69px; /* Define a largura da imagem do logo */
+}
+
 nav {
   display: flex;
   gap: 24px;
