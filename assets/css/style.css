@@ -21,7 +21,12 @@ header {
   background: #fff; /* Define a cor de fundo do cabeçalho */
   box-shadow: 0 0 20px rgba(15, 48, 106, 0.05); /* Adiciona sombra com cor, desfoque e transparência */
 }
-
+.header-left {
+  display: flex;
+  align-items: center;
+  justify-content:flex-start;
+  gap: 24px; /* Espaçamento entre o logo e o nav */
+}
 .logo {
   display: flex;
   align-items: center;
@@ -67,7 +72,11 @@ nav a:hover {
 .btn-primary:hover {
   background: #1d3f90;
 }
-
+.center-button {
+  display: flex;
+  justify-content: center; /* Centraliza o botão horizontalmente */
+  width: 80%;
+}
 .btn-secondary {
   background: transparent; /* Torna o fundo transparente */
   border: 1px solid #254fad; /* Adiciona uma borda azul */
@@ -93,23 +102,28 @@ nav a:hover {
 
 .hero-content {
   max-width: 600px; /* Define a largura máxima da área de texto */
+  margin-left: 60px;
 }
 
 .hero-content h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
+  font-size: 60px;
+  margin-bottom: 20px; 
+  color:#112656;
 }
 
 .hero-content p {
   font-size: 18px;
   color: #555;
-  margin-bottom: 28px;
+  margin-bottom: 40px;
+  width: 85%;
 }
 
 .hero img {
-  max-width: 500px;
+  max-width: 695px;
   width: 100%; /* Faz a imagem ocupar 100% do contêiner até o limite definido */
   border-radius: 8px;
+  margin-right: 60px;
+  
 }
 
 /* ======== BENEFÍCIOS ======== */
@@ -117,7 +131,7 @@ nav a:hover {
 .beneficios {
     width: 100%;
     padding: 0;
-    background: #f3f8ff; 
+    background:white; 
     text-align: center;
 }
 
@@ -134,25 +148,26 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: left;
-    gap: 80px;
+    gap: 150px;
     width: 90%;
     max-width: 1100px;
     margin: 40px 0 40px auto;;
     border-radius: 16px;
     background: #e7eef9;
+    box-shadow: 0 2px 20px rgba(15, 48, 106, 0.395);
 }
 
 .beneficio-itemE {
     display: flex;
     align-items: center;
     justify-content: right;
-    gap: 40px;
+    gap: 150px;
     width: 90%;
     max-width: 1100px;
     margin: 40px 0;
     border-radius: 16px;
     background: #e7eef9;
-    overflow: hidden;
+    box-shadow: 0 2px 20px rgba(15, 48, 106, 0.395);
 }
 
 /* Alternar lado da imagem */
@@ -164,13 +179,15 @@ nav a:hover {
 .beneficio-item img {
     width: 30%;
     max-width: 320px;
-    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
 
 .beneficio-itemE img {
     width: 30%;
     max-width: 320px;
-    border-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 /* Textos */
 .beneficio-texto {
@@ -194,36 +211,31 @@ nav a:hover {
 footer {
   background: linear-gradient(90deg, rgba(5, 28, 141, 0.83), rgba(0, 131, 196, 0.83));
   color: #fff;
-  text-align: center;
   padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
 }
-
-footer h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
+.colunas {
+  display: flex; 
+  justify-content: center; /* Centraliza as colunas horizontalmente */
+  gap: 380px;
+  margin-bottom: 15px; 
 }
-
-footer p {
-  max-width: 600px;
-  margin: 0 auto 20px;
-  opacity: 0.9; /* Define a transparência do texto */
+.colunas div p {
+  margin-top: 15px; 
+  font-size: 16px; 
 }
 
 footer .social {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   gap: 16px;
 }
-
 footer .social img {
-  width: 32px;
-  height: 32px;
-  filter: brightness(0) invert(1); /* Inverte as cores do ícone e o torna branco */
-  transition: transform 0.2s;
-}
-
-footer .social img:hover {
-  transform: scale(1.1); /* Aumenta levemente o tamanho no hover */
+  width: 150px;
+  cursor: pointer; 
+  border-radius: 15px;
 }
 
 /* ======== RESPONSIVIDADE ======== */
