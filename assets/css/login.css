@@ -1,0 +1,122 @@
+/* CONTAINER GERAL */
+body {
+    margin: 0;
+    padding: 0;
+    background: #FFFFFE;
+    position: relative;
+    width: 100%;
+    height: 900px;
+    font-family: 'roboto', sans-serif;
+}
+
+/* LATERAL AZUL */
+.lateral {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 939px;
+    top: 0;
+    background: #92C9E4;
+}
+
+/* IMAGEM GRANDE */
+.img-fundo {
+    position: absolute;
+    width: 622px;
+    height: 675px;
+    left: 730px;
+    top: 100px;
+    background: url(unnamed.png);
+    background-size: cover;
+    border-radius: 30px;
+}
+
+/* TÍTULO AUTOMACAO */
+.titulo {
+    position: absolute;
+    left: 48px;
+    top: 33px;
+    font-size: 30px;
+    font-weight: 700;
+    color: #000042;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* FRAME PRINCIPAL */
+.container-login {
+    position: absolute;
+    left: 48px;
+    top: 142px;
+    width: 502px;
+    height: 590px;
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+}
+
+/* LOGIN */
+.login-titulo {
+    font-size: 35px;
+    font-weight: 600;
+    color: #000;
+}
+
+/* TEXTOS */
+.label {
+    font-size: 20px;
+    font-weight: 600;
+    color: #263A43;
+}
+
+/* LINHA VERDE DO CPF */
+.linha-verde {
+    width: 100%;
+    height: 5px;
+    background: #54E28D;
+    border-radius: 0 0 5px 5px;
+}
+
+/* INPUT SENHA */
+.senha-box {
+    position: relative;
+    width: 490px;
+    height: 70px;
+    background: #fff;
+    border: 0.6px solid #B1B1B1;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+/* BOTÃO ENTRAR */
+.btn {
+    width: 490px;
+    height: 70px;
+    background: rgba(146, 201, 228, 0.29);
+    box-shadow: 0px 4px 30px rgba(38, 58, 67, 0.15);
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* LOGO */
+.logo > img {
+
+    width: 40px;
+    
+   
+}
+
+.lado-esquerdo {
+    position: absolute;
+    left: 48px;
+    top: 33px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

@@ -120,11 +120,17 @@ nav a:hover {
 }
 
 .hero img {
-  max-width: 695px;
+  max-width: 500px;
   width: 100%; /* Faz a imagem ocupar 100% do contêiner até o limite definido */
   border-radius: 8px;
   margin-right: 60px;
   
+}
+.empresas-parceiras {
+  display: block;
+  max-width: 700px;
+  width: 100%;
+  margin: 40px auto; /* Centraliza a imagem horizontalmente com margem superior e inferior */
 }
 
 /* ======== BENEFÍCIOS ======== */
@@ -214,7 +220,7 @@ footer {
   color: #fff;
   padding: 40px 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /
 }
 .colunas {
   display: flex; 
