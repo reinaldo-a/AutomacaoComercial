@@ -3,35 +3,41 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Automatize seu Comércio</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
-    <header>
-        <div class="header-left">
-            <div class="logo">
-                <a href="/">
-                    <img src="./assets/img/logohf.png" alt="HF Soluções">
+    <header class="header --bg-brand-dark" id="page-header">
+        <nav class="nav nav--mobile--close" id="page-navbar" role="navigation" aria-label="Menu principal">
+            <!-- Depois substituir pelo link do home -->
+            <a href="." class="nav__logo-link" aria-label="Página inicial">
+                <img class="nav__logo" src="assets/img/logohf.png"
+                    alt="Logo da Guavet no Cabeçalho">
+            </a>
+
+            <button class="nav__menu-button" id="nav__menu-button" aria-label="Abrir ou fechar menu"
+                aria-expanded="false" aria-controls="page-tabs">
+                <!-- icone é adicionado dinamicamente aqui -->
+            </button>
+
+            <ul class="nav__list" id="page-tabs">
+                <li class="nav__item"><a class="nav__link nav__link--active" href="index.html">Página Inicial</a></li>
+                <li class="nav__item"><a class="nav__link" href="servicos.html">Serviços</a></li>
+                <li class="nav__item"><a class="nav__link" href="sobre.html">Sobre</a></li>
+                <li class="nav__item"><a class="nav__link" href="equipe.html">Equipe</a></li>
+            </ul>
+
+            <div class="cta">
+                <a href="./cadastro.html">
+                    <button class="btn btn-secondary">Cadastre-se</button>
+                </a>
+                <a href="./login.html">
+                    <button class="btn btn-primary">Login</button>
                 </a>
             </div>
-
-            <nav>
-                <a href="index.html">Página Inicial</a>
-                <a href="servicos.html">Serviços</a>
-                <a href="sobre.html">Sobre</a>
-                <a href="equipe.html">Equipe</a>
-            </nav>
-        </div>
-        <div class="cta">
-            <a href="./cadastro.html">
-                <button class="btn btn-secondary">Cadastre-se</button>
-            </a>
-            <a href="./login.html">
-                <button class="btn btn-primary">Login</button>
-            </a>
-        </div>
+        </nav>
     </header>
 
     <section class="hero">
@@ -64,7 +70,7 @@
                     os custos operacionais.
                 </p>
             </div>
-            <img src="assets/img/agilidade no atendimento.png" alt="Agilidade no Atendimento">
+            <img id="taylor-img" src="assets/img/agilidade no atendimento.png" alt="Agilidade no Atendimento">
         </div>
 
         <!-- 2 Benefício -->
@@ -99,7 +105,7 @@
     <footer>
         
         <div class="colunas">
-            <div class="coluna1">
+            <div class="coluna coluna1">
                 <h3>Soluções</h3>
                 <p>Brainstorming</p>
                 <p>Planejamento</p>
@@ -107,7 +113,7 @@
                 <p>Pesquisa</p>
                 <p>Design</p>
             </div>
-            <div class="coluna2">
+            <div class="coluna coluna2">
                 <h3>Suporte</h3>
                 <p>Fale Conosco</p>
                 <p>Desenvolvedores</p>
@@ -115,14 +121,14 @@
                 <p>Integrações</p>
                 <p>Relatório</p>
             </div>
-            <div class="social">
+            <div class="coluna social">
             <h3>Baixe o App</h3>
             <img src="assets/img/appstore.png" alt="App Store" />
             <img src="assets/img/googleplay.png" alt="Google Play" />
             </div>
         </div>
     </footer>
-
+    <script src="assets/index.js"></script>
 </body>
 
 </html>

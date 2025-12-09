@@ -1,15 +1,17 @@
 .sobre-nos {
     background-image: url('../img/ceu.jpg');
     background-size: cover;
+    z-index: -1;
     background-position: center;
     background-repeat: no-repeat;
     margin: 0;
-    padding: 50px 0;
     width: 100%;
     font-family: "Inter", sans-serif;
 }
 
 .sobre-container {
+    padding: 1rem;
+    width: 100%;
     max-width: 1100px;
     margin: auto;
     display: flex;
@@ -43,3 +45,11 @@
     text-align: justify;
 }
 
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 900px) {
+    .sobre-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

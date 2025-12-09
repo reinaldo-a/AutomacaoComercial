@@ -1,8 +1,18 @@
 /* ======== Reset ======== */
 * {
-  box-sizing: border-box; /* Inclui bordas e padding no cálculo total da largura e altura do elemento */
-  margin: 0; /* Remove as margens padrão dos elementos */
-  padding: 0; /* Remove o espaçamento interno padrão dos elementos */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-family: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-weight: 400;
+}
+:root {
+  --nav-active-color: #254fad;
 }
 
 body {
@@ -14,46 +24,9 @@ body {
 
 /* ======== HEADER ======== */
 header {
-  display: flex; /* Ativa o modelo flexbox para alinhamento flexível dos itens */
-  justify-content: space-between; /* Distribui o espaço igualmente entre os itens */
-  align-items: center; /* Alinha os itens verticalmente no centro */
-  padding: 16px 48px; /* Adiciona espaçamento interno (vertical e horizontal) */
   background: #fff; /* Define a cor de fundo do cabeçalho */
-  box-shadow: 0 0 20px rgba(15, 48, 106, 0.05); /* Adiciona sombra com cor, desfoque e transparência */
-  border-bottom: 1px solid #e0e0e0; /* Adiciona uma linha inferior fina e cinza clara */
-}
-.header-left {
-  display: flex;
-  align-items: center;
-  justify-content:flex-start;
-  gap: 24px; /* Espaçamento entre o logo e o nav */
-}
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Cria um espaçamento entre os elementos internos */
 }
 
-.logo img {
-  width: 69px; /* Define a largura da imagem do logo */
-}
-
-nav {
-  display: flex;
-  gap: 24px;
-}
-
-nav a {
-  text-decoration: none; /* Remove o sublinhado dos links */
-  font-size: 16px; /* Define o tamanho da fonte */
-  font-weight: 500; /* Define o peso (espessura) da fonte */
-  color: #181d26;
-  transition: color 0.3s; /* Cria uma transição suave ao mudar a cor */
-}
-
-nav a:hover {
-  color: #254fad;
-}
 
 /* ======== BOTÕES ======== */
 .btn {
@@ -144,21 +117,20 @@ nav a:hover {
 
 /* Título */
 .beneficios h2 {
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 30px;
     margin-top: 30px;
 }
 
-/* ----- Cards (imagem + texto lado a lado) ----- */
 .beneficio-item {
     display: flex;
     align-items: center;
-    justify-content: left;
-    gap: 150px;
+    justify-content: space-between;
     width: 90%;
     max-width: 1100px;
     margin: 40px 0 40px auto;;
+    padding: 1rem;
     border-radius: 16px;
     background: #e7eef9;
     box-shadow: 0 2px 20px rgba(15, 48, 106, 0.395);
@@ -167,9 +139,9 @@ nav a:hover {
 .beneficio-itemE {
     display: flex;
     align-items: center;
-    justify-content: right;
-    gap: 150px;
+    justify-content: space-between;
     width: 90%;
+    padding: 1rem;
     max-width: 1100px;
     margin: 40px 0;
     border-radius: 16px;
@@ -183,9 +155,16 @@ nav a:hover {
 }
 
 /* Imagens */
-.beneficio-item img {
-    width: 30%;
-    max-width: 320px;
+
+
+@media (min-width: 500px) {
+.beneficio-texto {
+    width: 45%; 
+}
+
+  .beneficio-item img {
+    height: 100%;
+    max-width: min(50%, 20rem);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
   }
@@ -196,41 +175,48 @@ nav a:hover {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
+
+}
+
 /* Textos */
 .beneficio-texto {
-    width: 45%;
-    text-align: center;    
+    text-align: center;
+    justify-self: center;
 }
 
 .beneficio-texto h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-bottom: 15px;
     font-weight: bold;
 }
 
 .beneficio-texto p {
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.5;
-    
 }
 
 /* ======== FOOTER ======== */
 footer {
   background: linear-gradient(90deg, rgba(5, 28, 141, 0.83), rgba(0, 131, 196, 0.83));
   color: #fff;
-  padding: 40px 20px;
+  padding: 3rem 1.5rem;
   display: flex;
-  flex-direction: column; /
 }
 .colunas {
+  width: 100%;
   display: flex; 
-  justify-content: center; /* Centraliza as colunas horizontalmente */
-  gap: 380px;
+  justify-content: space-between;
+  flex-wrap: wrap;
   margin-bottom: 15px; 
 }
+
+.coluna {
+  padding: 1rem;
+}
+
 .colunas div p {
   margin-top: 15px; 
-  font-size: 16px; 
+  font-size: 1rem; 
 }
 
 footer .social {
@@ -247,9 +233,12 @@ footer .social img {
 
 /* ======== RESPONSIVIDADE ======== */
 @media (max-width: 900px) {
-  header {
-    flex-direction: column;
-    gap: 12px;
+  .beneficio-item {
+    flex-direction: row-reverse;
+  }
+  .beneficios h2 {
+    font-size: 1.7;
+    padding: 1rem;
   }
 
   .hero {
@@ -259,6 +248,161 @@ footer .social img {
   }
 
   .hero-content h1 {
-    font-size: 32px;
+    font-size: 2rem;
   }
+}
+
+
+.cta {
+  margin-left: auto;
+}
+
+@media (max-width: 500px) {
+  .nav--mobile--open .cta {
+     grid-column: span 2;
+  }
+
+  .beneficio-item, .beneficio-itemE {
+    display: flex;
+    flex-direction: column !important;
+  }
+
+  .beneficio-item *, .beneficio-itemE * {
+    width: 100%;
+    /* border-radius: ; */
+  }
+
+  .beneficio-item img, .beneficio-itemE img {
+    height: 10rem;
+    object-fit: cover;
+  }
+
+  #taylor-img {
+      object-position: top;
+  }
+
+
+  .beneficio-texto {
+    padding: 1rem;
+  }
+
+    /* Alternar lado da imagem */
+  .beneficio-item:nth-child(even) {
+      flex-direction: column-reverse !important;
+  }
+}
+
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem clamp(1em, 5vw, 4em);
+  padding-bottom: 1rem;
+}
+.header--fixed {
+  padding-top: 1.5em;
+  position: fixed;
+  inset: 0; /* shorthand para top:0; right:0; bottom:0; left:0 */
+  z-index: 1000;
+  overflow-y: hidden;
+}
+.header .nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+  /* justify-content: space-between; */
+}
+.header .nav .nav__logo {
+  width: 69px;
+  height: auto;
+}
+.header .nav .nav__menu-button {
+  padding: 1rem 0 1rem 1rem;
+  display: none;
+  background-color: transparent;
+}
+.header .nav .nav__menu-button svg {
+  width: 1.5rem;
+}
+.header .nav .nav__list {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  font-size: 1rem;
+  align-items: center;
+}
+.header .nav .nav__link {
+  line-height: 1.5;
+  padding-bottom: 0.5rem;
+  font-weight: 400;
+  position: relative;
+    text-decoration: none; /* Remove o sublinhado dos links */
+  font-size: 16px; /* Define o tamanho da fonte */
+  font-weight: 500; /* Define o peso (espessura) da fonte */
+  color: #181d26;
+  transition: color 0.3s; /* Cria uma transição suave ao mudar a cor */
+}
+.header .nav .nav__link--active, .header .nav .nav__link:hover {
+  color: var(--nav-active-color);
+}
+.header .nav .nav__link--active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--nav-active-color);
+}
+.header .nav--mobile .nav__menu-button {
+  display: block;
+}
+.header .nav--mobile--close .nav__list {
+  display: none;
+  appearance: none;
+}
+.header .nav--mobile--open {
+  display: grid;
+  grid-template-areas: "logo button" "list list";
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: fit-content;
+}
+.header .nav--mobile--open .nav__list {
+  width: 100%;
+  grid-area: list;
+  display: flex;
+  justify-content: baseline;
+  align-items: baseline;
+  flex-direction: column;
+  padding-top: 3.875rem;
+  gap: 2rem;
+}
+.header .nav--mobile--open .nav__item {
+  width: 100%;
+}
+.header .nav--mobile--open .nav__link {
+  display: block;
+  color: #6C757D;
+}
+.header .nav--mobile--open .nav__link--active {
+  color: #254fad;
+}
+.header .nav--mobile--open .nav__link--active::after {
+  background-color: #254fad;
+}
+.header .nav--mobile--open .nav__menu-button {
+  grid-area: button;
+  justify-self: end;
+  color: #254fad;
+}
+.header .nav--mobile--open .nav__menu-button svg {
+  width: 20px;
+  height: 20px;
+}
+.header .nav--mobile--open .nav__logo-link {
+  grid-area: logo;
 }
