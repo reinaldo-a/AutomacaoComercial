@@ -1,122 +1,222 @@
-/* CONTAINER GERAL */
-body {
+/* ESTILOS GERAIS           */
+* {
     margin: 0;
     padding: 0;
-    background: #FFFFFE;
-    position: relative;
-    width: 100%;
-    height: 900px;
-    font-family: 'roboto', sans-serif;
+    box-sizing: border-box; 
+    font-family: "roboto", sans-serif;
 }
 
-/* LATERAL AZUL */
-.lateral {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 939px;
-    top: 0;
-    background: #92C9E4;
+body {
+    height: 100vh;
+    background: #ffffff;
+    overflow: hidden;
 }
 
-/* IMAGEM GRANDE */
-.img-fundo {
-    position: absolute;
-    width: 622px;
-    height: 675px;
-    left: 730px;
-    top: 100px;
-    background: url(unnamed.png);
-    background-size: cover;
-    border-radius: 30px;
-}
-
-/* TÍTULO AUTOMACAO */
-.titulo {
-    position: absolute;
-    left: 48px;
-    top: 33px;
-    font-size: 30px;
-    font-weight: 700;
-    color: #000042;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* FRAME PRINCIPAL */
-.container-login {
-    position: absolute;
-    left: 48px;
-    top: 142px;
-    width: 502px;
-    height: 590px;
-    display: flex;
-    flex-direction: column;
-    gap: 56px;
-}
-
-/* LOGIN */
-.login-titulo {
-    font-size: 35px;
-    font-weight: 600;
-    color: #000;
-}
-
-/* TEXTOS */
-.label {
-    font-size: 20px;
-    font-weight: 600;
-    color: #263A43;
-}
-
-/* LINHA VERDE DO CPF */
-.linha-verde {
-    width: 100%;
-    height: 5px;
-    background: #54E28D;
-    border-radius: 0 0 5px 5px;
-}
-
-/* INPUT SENHA */
-.senha-box {
-    position: relative;
-    width: 490px;
-    height: 70px;
-    background: #fff;
-    border: 0.6px solid #B1B1B1;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-}
-
-/* BOTÃO ENTRAR */
-.btn {
-    width: 490px;
-    height: 70px;
-    background: rgba(146, 201, 228, 0.29);
-    box-shadow: 0px 4px 30px rgba(38, 58, 67, 0.15);
-    border-radius: 6px;
-    font-weight: 700;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-
-/* LOGO */
-.logo > img {
-
-    width: 40px;
-    
-   
-}
+/* HEADER (Logo)            */
 
 .lado-esquerdo {
     position: absolute;
-    left: 48px;
-    top: 33px;
+    top: 35px;
+    left: 55px;
     display: flex;
     align-items: center;
-    gap: 10px;
+}
+
+.titulo {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0c2136;
+    margin-right: 6px;
+}
+
+.logo img {
+    width: 85px;
+    max-width: 60%;
+}
+
+/* FORMULÁRIO DE LOGIN      */
+
+.container-login {
+    position: absolute;
+    top: 250px;
+    left: 150px;
+    width: 420px;
+   
+}
+
+.login-titulo {
+    font-size: 34px;
+    font-weight: 700;
+    color: #0a1c2e;
+    margin-bottom: 35px;
+    
+}
+
+/* Labels */
+.label {
+    display: block;
+    margin-bottom: 10px;
+    color: #505050;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 16px 15px;
+    border: 1px solid #d7dde3;
+    border-radius: 10px;
+    background: #ffffff;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #00c56e;
+}
+
+/* Barra verde no CPF */
+.linha-verde {
+    width: 100%;
+    height: 3px;
+    background: #00c56e;
+    border-radius: 2px;
+    margin-top: 4px;
+    margin-bottom: 32px;
+}
+
+/* Botão */
+.btn {
+    width: 100%;
+    height: 58px;
+    background: linear-gradient(180deg, #d7e7ef 0%, #c8dae6 100%);
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0b212f;
+    margin-top: 28px;
+    text-align: center;
+    padding-top: 17px;
+
+    /* Sombra idêntica */
+    box-shadow: 0px 12px 22px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.btn:hover {
+    filter: brightness(0.97);
+}
+
+/* PAINEL AZUL (LADO DIREITO) */
+
+
+.lateral {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35%;
+    height: 100%;
+    background: #a2d3ef;
+    z-index: 1;
+}
+
+/* IMAGEM GRANDE À DIREITA  */
+
+
+.img-fundo {
+    position: absolute;
+    width: 400px; 
+    right: 4.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3; 
+    margin-right: 200px;
+}
+
+.img-fundo img {
+    
+    width: 500px;               /* Tamanho idêntico */
+    border-radius: 35px;        /* Mesma curva */
+    box-shadow: 0px 6px 28px rgba(0, 0, 0, 0.18);
+    
+}
+
+
+
+
+/* =============================== */
+/*       RESPONSIVIDADE            */
+/* =============================== */
+
+/* TABLETS (até 1024px) */
+@media (max-width: 1024px) {
+
+    .lateral {
+        width: 45%;
+    }
+
+    .img-fundo {
+        width: 500px;
+        right: 2%;
+        margin-right: 0;
+    }
+
+    .img-fundo img {
+        width: 500px;
+    }
+
+    .container-login {
+        top: 180px;
+        left: 50px;
+        width: 360px;
+    }
+}
+
+/* CELULARES GRANDES (até 768px) */
+@media (max-width: 768px) {
+
+    .lateral,
+    .img-fundo {
+        display: none; /* some o painel e imagem para liberar espaço */
+    }
+
+    .lado-esquerdo {
+        top: 20px;
+        left: 20px;
+    }
+
+    .container-login {
+        position: relative;
+        top: 120px;
+        left: 0;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .login-titulo {
+        font-size: 28px;
+    }
+}
+
+/* CELULARES PEQUENOS (até 480px) */
+@media (max-width: 480px) {
+
+    .container-login {
+        width: 92%;
+        top: 100px;
+    }
+
+    .login-titulo {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .btn {
+        height: 52px;
+        font-size: 16px;
+        padding-top: 14px;
+    }
 }
